@@ -1,4 +1,5 @@
 import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCUqDHNjr1BkZSS8cX065OtL7qC-2euAlI",
@@ -6,7 +7,7 @@ const firebaseConfig = {
   projectId: "auth-detyra-66ebf",
   storageBucket: "auth-detyra-66ebf.firebasestorage.app",
   messagingSenderId: "513220532941",
-  appId: "1:513220532941:web:52cc367f96c9771fe32784"
+  appId: "1:513220532941:web:52cc367f96c9771fe32784",
 };
 
 const app = initializeApp(firebaseConfig);
