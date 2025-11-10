@@ -1,27 +1,27 @@
-// app/(auth)/login.jsx
-import React, { useState } from "react";
+
+import { AntDesign } from "@expo/vector-icons";
+import { useRouter } from "expo-router";
 import {
-  View,
+  GoogleAuthProvider,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+} from "firebase/auth";
+import { useState } from "react";
+import {
+  Platform,
+  StyleSheet,
   Text,
   TextInput,
   TouchableOpacity,
-  StyleSheet,
-  Platform,
+  View,
 } from "react-native";
-import { useRouter } from "expo-router";
-import { AntDesign } from "@expo/vector-icons";
 import { auth } from "../../firebaseConfig";
-import {
-  signInWithEmailAndPassword,
-  GoogleAuthProvider,
-  signInWithPopup,
-} from "firebase/auth";
 
 export default function Login() {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [loading, setLoading] = useState(false); // veç për disable, jo për tekst
+  const [loading, setLoading] = useState(false); 
   const [error, setError] = useState("");
 
   const handleLoginEmail = async () => {

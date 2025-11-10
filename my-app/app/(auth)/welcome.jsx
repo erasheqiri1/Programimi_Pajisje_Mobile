@@ -1,15 +1,14 @@
-// app/(auth)/welcome.jsx
-import React, { useEffect, useState } from "react";
+import { useRouter } from "expo-router";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import { useEffect, useState } from "react";
 import {
-  View,
+  ActivityIndicator,
+  StyleSheet,
   Text,
   TouchableOpacity,
-  StyleSheet,
-  ActivityIndicator,
+  View,
 } from "react-native";
-import { useRouter } from "expo-router";
 import { auth } from "../../firebaseConfig";
-import { onAuthStateChanged, signOut } from "firebase/auth";
 
 export default function Welcome() {
   const router = useRouter();

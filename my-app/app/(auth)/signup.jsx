@@ -1,15 +1,15 @@
-// app/(auth)/signup.jsx
-import React, { useState } from "react";
+
+import { useRouter } from "expo-router";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { useState } from "react";
 import {
-  View,
+  StyleSheet,
   Text,
   TextInput,
   TouchableOpacity,
-  StyleSheet,
+  View,
 } from "react-native";
-import { useRouter } from "expo-router";
 import { auth } from "../../firebaseConfig";
-import { createUserWithEmailAndPassword } from "firebase/auth";
 
 export default function Signup() {
   const router = useRouter();
