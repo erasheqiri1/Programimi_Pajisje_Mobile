@@ -13,7 +13,7 @@ The app supports:
    cd Programimi_Pajisje_Mobile
    ```
 2.Install depencendies
-```bash
+   ```bash
    npm install
    ```
 3. Clone the repository
@@ -26,26 +26,26 @@ The app supports:
    - Copy your Firebase configuration object
    -In your project, create a file named **firebaseConfig.ts** and paste your config inside it:
    ```bash
- import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
+   import { initializeApp } from "firebase/app";
+   import { getAuth } from "firebase/auth";
 
-const firebaseConfig = {
-  apiKey: "AIzaSyCUqDHNjr1BkZSS8cX065OtL7qC-2euAlI",
-  authDomain: "auth-detyra-66ebf.firebaseapp.com",
-  projectId: "auth-detyra-66ebf",
-  storageBucket: "auth-detyra-66ebf.firebasestorage.app",
-  messagingSenderId: "513220532941",
-  appId: "1:513220532941:web:52cc367f96c9771fe32784",
-};
+   const firebaseConfig = {
+   apiKey: "AIzaSyCUqDHNjr1BkZSS8cX065OtL7qC-2euAlI",
+   authDomain: "auth-detyra-66ebf.firebaseapp.com",
+   projectId: "auth-detyra-66ebf",
+   storageBucket: "auth-detyra-66ebf.firebasestorage.app",
+   messagingSenderId: "513220532941",
+   appId: "1:513220532941:web:52cc367f96c9771fe32784",
+   };
 
-const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
-export default app;
+  const app = initializeApp(firebaseConfig);
+   export const auth = getAuth(app);
+   export default app;
    ```
 4.Run the app in web mode
-```bash
-npm run rweb
-```
+   ```bash
+   npm run web
+   ```
 --------------------------------------------------------------
 In the output, you'll find options to open the app in a
 
