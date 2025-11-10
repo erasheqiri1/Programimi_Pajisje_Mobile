@@ -7,12 +7,12 @@ The app supports:
 - A **Welcome page** that displays the logged-in user's name
 --------------------------------------------------------------------------------
 ## Set up instuctions
-1. Clone the repository
+###1. Clone the repository
     ```bash
     git clone https://github.com/erasheqiri1/Programimi_Pajisje_Mobile.git
    cd Programimi_Pajisje_Mobile
    ```
-2.Install depencendies
+###2.Install depencendies
    ```bash
    npm install
    ```
