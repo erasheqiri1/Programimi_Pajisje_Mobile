@@ -1,21 +1,52 @@
-# Welcome to your Expo app 👋
-
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
-
-## Get started
-
-1. Install dependencies
-
-   ```bash
+# Firebase Google Authentication (Expo Web) 
+This project is a simple **React Native (Expo Web)** app built using **Firebase Authentication** for user signup and login.
+The app supports:
+- Sign up with **email & password**
+- Login with **email & password**
+- Login with **Google**
+- A **Welcome page** that displays the logged-in user's name
+--------------------------------------------------------------------------------
+## Set up instuctions
+1. Clone the repository
+    ```bash
+    git clone https://github.com/erasheqiri1/Programimi_Pajisje_Mobile.git
+   cd Programimi_Pajisje_Mobile
+   ```
+2.Install depencendies
+```bash
    npm install
    ```
-
-2. Start the app
-
+3. Clone the repository
+   -Go to [Firebase Console](https://console.firebase.google.com/)
+   -Create a **new Firebase project**
+   -Navigate to **Authentication → Sign-in Method**
+   - Enable **Email/Password**
+   - Enable **Google**
+   -Go to **Project Settings → General → Your apps → Web App**
+   - Copy your Firebase configuration object
+   -In your project, create a file named **firebaseConfig.ts** and paste your config inside it:
    ```bash
-   npx expo start
-   ```
+ import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
 
+const firebaseConfig = {
+  apiKey: "AIzaSyCUqDHNjr1BkZSS8cX065OtL7qC-2euAlI",
+  authDomain: "auth-detyra-66ebf.firebaseapp.com",
+  projectId: "auth-detyra-66ebf",
+  storageBucket: "auth-detyra-66ebf.firebasestorage.app",
+  messagingSenderId: "513220532941",
+  appId: "1:513220532941:web:52cc367f96c9771fe32784",
+};
+
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
+export default app;
+   ```
+4.Run the app in web mode
+```bash
+npm run rweb
+```
+--------------------------------------------------------------
 In the output, you'll find options to open the app in a
 
 - [development build](https://docs.expo.dev/develop/development-builds/introduction/)
