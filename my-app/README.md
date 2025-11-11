@@ -18,94 +18,71 @@ The app supports:
 ![Foto 4](assets/foto4.png)
 
 -----------------------------------------------------------------------------------------------------------
-##Features
+## Features
+-Firebase Authentication – Email/Password login & signup
 
+-Google Sign-In – Available for Web only
 
+-Session Handling – Auto redirect if user is not logged in
 
+-User Interface – Clean design, error handling, and validation
 
-
-
-
-
-
-
-
-
-
+-Navigation – Simple routing with expo-router
 
 ------------------------------------------------------------------------------------------------------------------
 ## Set up instuctions
-###1. Clone the repository
+### 1. Clone the repository
   ```bash
    https://github.com/erasheqiri1/Programimi_Pajisje_Mobile.git
    cd my-app
    ```
-###2. Install dependencies
+### 2. Install dependencies
    ```bash
    npm install
    ```
-###3. Create e firebase project
+### 3. Create e firebase project
  - Go to [Firebase Console](https://console.firebase.google.com/)
  - Create a new Firebase project
- - Navigate to Authentiacation → Sign-in Method
-      -Enable **Email/Password**
-      -Enabble **Google**
- -Go to Project Settings→ General → Your apps → Web App
-      -Copy your Friebase config
- -In your project, create a file name **friebaseCongig.js** and paste your config inside it
-    ```bash
-   // firebaseConfig.js
-import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
+ - Navigate to Authentiacation → Sign-in Method. Enable **Email/Password** and**Google Sign-In**
+ - Go to Project Settings→General→Your app → Web App
+ - Copy your Firebase Config
+ - In your project, create a file name **firebaseConfig.js** and paste your config inside it
 
-const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
-};
-
-const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
-export default app;
-   ```
-----------------------------------------------------------------------------------------------------------------
-##4.Run the web in web mode
    ```bash
-   npm run web
+   import { initializeApp } from "firebase/app";
+   import { getAuth } from "firebase/auth";
+   
+   const firebaseConfig = {
+   apiKey: "YOUR_API_KEY",
+   authDomain: "YOUR_AUTH_DOMAIN",
+   projectId: "YOUR_PROJECT_ID",
+   storageBucket: "YOUR_STORAGE_BUCKET",
+   messagingSenderId: "YOUR_SENDER_ID",
+   appId: "YOUR_APP_ID",
+   };
+
+   const app = initializeApp(firebaseConfig);
+   export const auth = getAuth(app);
+   export default app;
    ```
----------------------------------------------------------------------------------------------------------------------
-In the output, you'll find options to open the app in a
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+----------------------------------------------------------------------------------------------------------------
+## Folder Structure
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+ ```bash
+MY-APP/
+├── app/
+│   ├── (auth)/
+│   │   ├── login.jsx
+│   │   ├── signup.jsx
+│   │   └── welcome.jsx
+│   ├── _layout.jsx        
+│   └── index.jsx
+│
+├── firebaseConfig.jsx
+└── README.md
 
-## Get a fresh project
 
-When you're ready, run:
 
-```bash
-npm run reset-project
-```
+   ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
