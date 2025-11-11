@@ -1,64 +1,88 @@
-# Firebase Google Authentication (Expo Web) 👋
+# Firebase Google Authentication (Expo Web) 
 This project is a simple **React Native (Expo Web)** app built using **Firebase Authentication** for user signup and login.
 The app supports:
 - Sign up with **email & password**
 - Login with **email & password**
 - Login with **Google**
 - A **Welcome page** that displays the logged-in user's name
+----------------------------------------------------------------------------------------------------------------
+## Screenshots
 
+### Google Sign-In Screen
+![Foto 1](assets/foto12.png)
 
-## Demo
-![Signup Screen](./assets/foto1.PNG)
-![Login Screen](./assets/foto2.PNG)
-![Welcome Screen](./assets/foto3.PNG)
-![App Overview](./assets/foto4.PNG)
+### Welcome Page
+![Foto 3](assets/foto3.png)
 
-## Setup Instructions
-1. **Clone the repository**
+### Firbase User Console
+![Foto 4](assets/foto4.png)
+
+-----------------------------------------------------------------------------------------------------------
+## Features
+-Firebase Authentication – Email/Password login & signup
+
+-Google Sign-In – Available for Web only
+
+-Session Handling – Auto redirect if user is not logged in
+
+-User Interface – Clean design, error handling, and validation
+
+-Navigation – Simple routing with expo-router
+
+------------------------------------------------------------------------------------------------------------------
+## Set up instuctions
+### 1. Clone the repository
+  ```bash
+   https://github.com/erasheqiri1/Programimi_Pajisje_Mobile.git
+   cd my-app
+   ```
+### 2. Install dependencies
    ```bash
-   git clone https://github.com/erasheqiri1/Programimi_Pajisje_Mobile.git
-   cd Programimi_Pajisje_Mobile
+   npm install
+   ```
+### 3. Create e firebase project
+ - Go to [Firebase Console](https://console.firebase.google.com/)
+ - Create a new Firebase project
+ - Navigate to Authentiacation → Sign-in Method. Enable **Email/Password** and**Google Sign-In**
+ - Go to Project Settings→General→Your app → Web App
+ - Copy your Firebase Config
+ - In your project, create a file name **firebaseConfig.js** and paste your config inside it
 
+   ```bash
+   import { initializeApp } from "firebase/app";
+   import { getAuth } from "firebase/auth";
+   
+   const firebaseConfig = {
+   apiKey: "YOUR_API_KEY",
+   authDomain: "YOUR_AUTH_DOMAIN",
+   projectId: "YOUR_PROJECT_ID",
+   storageBucket: "YOUR_STORAGE_BUCKET",
+   messagingSenderId: "YOUR_SENDER_ID",
+   appId: "YOUR_APP_ID",
+   };
 
-2. Install depecendies
-npm install
+   const app = initializeApp(firebaseConfig);
+   export const auth = getAuth(app);
+   export default app;
+   ```
 
-
-3. create a firebase config
-Go to [Firebase Console](https://console.firebase.google.com/)
-2. Create a **new Firebase project**
-3. Navigate to **Authentication → Sign-in Method**
-   - Enable **Email/Password**
-   - Enable **Google**
-4. Go to **Project Settings → General → Your apps → Web App**
-   - Copy your Firebase configuration object
-5. In your project, create a file named **firebaseConfig.ts** and paste your config inside it:
-
-import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyCUqDHNjr1BkZSS8cX065OtL7qC-2euAlI",
-  authDomain: "auth-detyra-66ebf.firebaseapp.com",
-  projectId: "auth-detyra-66ebf",
-  storageBucket: "auth-detyra-66ebf.firebasestorage.app",
-  messagingSenderId: "513220532941",
-  appId: "1:513220532941:web:52cc367f96c9771fe32784",
-};
-
-const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
-export default app;
-
+----------------------------------------------------------------------------------------------------------------
 ## Folder Structure
 
-├── app
-│   ├── (auth)
-│   │   ├── login.jsx        # Login screen (email/password + Google)
-│   │   ├── signup.jsx       # Signup screen (email/password)
-│   │   └── welcome.jsx      # Welcome screen (shows user name)
-│   ├── _layout.jsx          # Main layout that defines Stack navigation for auth screens
-│   └── index.jsx            # Redirects user to /auth/login
-├── firebaseConfig.ts        # Firebase initialization & auth export
-├── package.json
+ ```bash
+MY-APP/
+├── app/
+│   ├── (auth)/
+│   │   ├── login.jsx
+│   │   ├── signup.jsx
+│   │   └── welcome.jsx
+│   ├── _layout.jsx        
+│   └── index.jsx
+│
+├── firebaseConfig.jsx
 └── README.md
+
+
+
+   ```
+
