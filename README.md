@@ -9,13 +9,13 @@ The app supports:
 ## Screenshots
 
 ### Google Sign-In Screen
-![Foto 1](assets/foto12.png)
+<img src="my-app/assets/foto12.png" width ="410}"/>
 
 ### Welcome Page
-![Foto 3](assets/foto3.png)
+<img src="my-app/assets/foto3.png" width ="350}"/>
 
 ### Firbase User Console
-![Foto 4](assets/foto4.png)
+<img src="my-app/assets/foto4.png" width ="700}"/>
 
 -----------------------------------------------------------------------------------------------------------
 ## Features
