@@ -5,48 +5,78 @@ The app supports:
 - Login with **email & password**
 - Login with **Google**
 - A **Welcome page** that displays the logged-in user's name
---------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------
+## Screenshots
+
+### Google Sign-In Screen
+![Foto 1](assets/foto12.png)
+
+### Welcome Page
+![Foto 3](assets/foto3.png)
+
+### Firbase User Console
+![Foto 4](assets/foto4.png)
+
+-----------------------------------------------------------------------------------------------------------
+##Features
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------
 ## Set up instuctions
 ###1. Clone the repository
-    ```bash
-    git clone https://github.com/erasheqiri1/Programimi_Pajisje_Mobile.git
-   cd Programimi_Pajisje_Mobile
+  ```bash
+   https://github.com/erasheqiri1/Programimi_Pajisje_Mobile.git
+   cd my-app
    ```
-###2.Install depencendies
+###2. Install dependencies
    ```bash
    npm install
    ```
-3. Clone the repository
-   -Go to [Firebase Console](https://console.firebase.google.com/)
-   -Create a **new Firebase project**
-   -Navigate to **Authentication → Sign-in Method**
-   - Enable **Email/Password**
-   - Enable **Google**
-   -Go to **Project Settings → General → Your apps → Web App**
-   - Copy your Firebase configuration object
-   -In your project, create a file named **firebaseConfig.ts** and paste your config inside it:
-   ```bash
-   import { initializeApp } from "firebase/app";
-   import { getAuth } from "firebase/auth";
+###3. Create e firebase project
+ - Go to [Firebase Console](https://console.firebase.google.com/)
+ - Create a new Firebase project
+ - Navigate to Authentiacation → Sign-in Method
+      -Enable **Email/Password**
+      -Enabble **Google**
+ -Go to Project Settings→ General → Your apps → Web App
+      -Copy your Friebase config
+ -In your project, create a file name **friebaseCongig.js** and paste your config inside it
+    ```bash
+   // firebaseConfig.js
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
 
-   const firebaseConfig = {
-   apiKey: "AIzaSyCUqDHNjr1BkZSS8cX065OtL7qC-2euAlI",
-   authDomain: "auth-detyra-66ebf.firebaseapp.com",
-   projectId: "auth-detyra-66ebf",
-   storageBucket: "auth-detyra-66ebf.firebasestorage.app",
-   messagingSenderId: "513220532941",
-   appId: "1:513220532941:web:52cc367f96c9771fe32784",
-   };
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_SENDER_ID",
+  appId: "YOUR_APP_ID"
+};
 
-  const app = initializeApp(firebaseConfig);
-   export const auth = getAuth(app);
-   export default app;
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
+export default app;
    ```
-4.Run the app in web mode
+----------------------------------------------------------------------------------------------------------------
+##4.Run the web in web mode
    ```bash
    npm run web
    ```
---------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
 In the output, you'll find options to open the app in a
 
 - [development build](https://docs.expo.dev/develop/development-builds/introduction/)
