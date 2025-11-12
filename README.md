@@ -30,7 +30,7 @@ The app supports:
 -Navigation – Simple routing with expo-router
 
 ------------------------------------------------------------------------------------------------------------------
-## Set up instuctions
+## Set up instructions
 ### 1. Clone the repository
   ```bash
    https://github.com/erasheqiri1/Programimi_Pajisje_Mobile.git
@@ -40,7 +40,7 @@ The app supports:
    ```bash
    npm install
    ```
-### 3. Create e firebase project
+### 3. Create a firebase project
  - Go to [Firebase Console](https://console.firebase.google.com/)
  - Create a new Firebase project
  - Navigate to Authentiacation → Sign-in Method. Enable **Email/Password** and**Google Sign-In**
