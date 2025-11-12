@@ -43,7 +43,7 @@ The app supports:
 ### 3. Create a firebase project
  - Go to [Firebase Console](https://console.firebase.google.com/)
  - Create a new Firebase project
- - Navigate to Authentiacation → Sign-in Method. Enable **Email/Password** and**Google Sign-In**
+ - Navigate to Authentication → Sign-in Method. Enable **Email/Password** and**Google Sign-In**
  - Go to Project Settings→General→Your app → Web App
  - Copy your Firebase Config
  - In your project, create a file name **firebaseConfig.js** and paste your config inside it
